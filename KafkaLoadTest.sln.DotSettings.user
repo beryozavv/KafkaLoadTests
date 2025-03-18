@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AKafkaProducerRegistrationExtensions_002Ecs_002Fl_003AC_0021_003FUsers_003Fberyo_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F1381966e3c86fff1db16fa36aca3328b1c7f68388747df1e368cb09f715f_003FKafkaProducerRegistrationExtensions_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMessage_00602_002Ecs_002Fl_003AC_0021_003FUsers_003Fberyo_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fb7d73c1c2161408c96e77c81d00435b26ca00_003F7b_003Fc3b29de2_003FMessage_00602_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\beryo\.nuget\packages\masstransit.kafka\8.3.7\lib\net8.0\MassTransit.KafkaIntegration.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1b90e727_002D41c9_002D4edf_002D8bfb_002Df8e954b8aee4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ProducerTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaProducerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaLoadTestWithMassTransit.LoadTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaProducerContinueWithTest.ProducerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaPublishLoadTestWithMassTransit.LoadTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
