@@ -10,5 +10,7 @@
     &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaLoadTestWithMassTransit.LoadTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaProducerContinueWithTest.ProducerTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaPublishLoadTestWithMassTransit.LoadTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaLoadTestMassTransit&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::947ECB1C-7672-41A3-9BEF-3E95EB7DF452::net8.0::KafkaLoadTest.KafkaPublishLoadTestMassTransit&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

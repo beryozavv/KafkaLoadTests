@@ -8,11 +8,11 @@ using Xunit.Abstractions;
 
 namespace KafkaLoadTest;
 
-public class KafkaPublishLoadTestWithMassTransit
+public class KafkaPublishLoadTestMassTransit
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public KafkaPublishLoadTestWithMassTransit(ITestOutputHelper testOutputHelper)
+    public KafkaPublishLoadTestMassTransit(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
     }
@@ -32,7 +32,6 @@ public class KafkaPublishLoadTestWithMassTransit
             x.UsingInMemory(); // Для внутренних нужд MassTransit
             x.AddRider(rider =>
             {
-                
                 rider.AddProducer<KafkaMessage>(
                     TopicName, new ProducerConfig
                     {
@@ -46,10 +45,10 @@ public class KafkaPublishLoadTestWithMassTransit
                 rider.UsingKafka((context, k) =>
                 {
                     k.Host("localhost:9092");
-                    k.TopicEndpoint<KafkaMessage>(TopicName, "load-test-group", e =>
-                    {
-                        //e.ConfigureConsumer(context, typeof(MessageConsumer)); // Для проверки доставки
-                    });
+                    // k.TopicEndpoint<KafkaMessage>(TopicName, "load-test-group", e =>
+                    // {
+                    //     //e.ConfigureConsumer(context, typeof(MessageConsumer)); // Для проверки доставки
+                    // });
                 });
             });
         });
@@ -85,31 +84,20 @@ public class KafkaPublishLoadTestWithMassTransit
 
             for (int i = 0; i < MessageCount; i++)
             {
-                await block.SendAsync(i); // Асинхронная отправка <button class="citation-flag" data-index="7">
+                block.Post(i); // Асинхронная отправка <button class="citation-flag" data-index="7">
             }
 
             block.Complete();
             await block.Completion;
 
-            _testOutputHelper.WriteLine($"{DateTime.Now.ToString("O")} Отправка завершена, останавливаем шину");
-            await busControl.StopAsync();
             stopwatch.Stop();
-
-            _testOutputHelper.WriteLine($"{DateTime.Now.ToString("O")} Отправка {MessageCount} сообщений завершена через {stopwatch.Elapsed}");
+            _testOutputHelper.WriteLine($"{DateTime.Now.ToString("O")} Отправка завершена, останавливаем шину");
+            _testOutputHelper.WriteLine(
+                $"{DateTime.Now.ToString("O")} Отправка {MessageCount} сообщений завершена через {stopwatch.Elapsed}");
             _testOutputHelper.WriteLine(
                 $"{DateTime.Now.ToString("O")} Производительность: {MessageCount / stopwatch.Elapsed.TotalSeconds:F2} msg/s");
+            
+            await busControl.StopAsync();
         }
     }
-
-    // Простой консьюмер для проверки <button class="citation-flag" data-index="3">
-    // class MessageConsumer : IConsumer<KafkaMessage>
-    // {
-    //     public Task Consume(ConsumeContext<KafkaMessage> context)
-    //     {
-    //         // Здесь можно добавить логику проверки
-    //         return Task.CompletedTask;
-    //     }
-    // }
-
-    public class KafkaMessage(string Value);
 }
